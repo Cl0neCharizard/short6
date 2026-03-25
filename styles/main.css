@@ -1,0 +1,178 @@
+/* variables */
+:root {
+	--primary-color: #931420;
+	--accent-color: #f6bb73;
+	--light-accent: #fffded;
+	--light: white;
+	--dark: black;
+}
+
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* default styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin: auto;
+	border: 3px solid var(--primary-color);
+	background-color: var(--light);
+}
+
+header,
+section,
+aside,
+footer {
+	padding: 1em;
+}
+
+h1,
+h2,
+h3,
+p,
+article,
+blockquote {
+	padding-bottom: .5em;
+}
+
+ul {
+	margin-left: 1.5em;
+	padding-bottom: .5em;
+}
+
+h1 {
+	font-size: 150%;
+}
+
+h2 {
+	font-size: 120%;
+}
+
+h3 {
+	font-size: 110%;
+}
+
+a:focus,
+a:hover {
+	font-style: italic;
+}
+
+/* header */
+header {
+	border-bottom: 3px solid var(--primary-color);
+	background-image: linear-gradient(
+		30deg,
+		var(--accent-color) 0%,
+		var(--light-accent) 25%,
+		var(--light) 50%,
+		var(--light-accent) 75%,
+		var(--accent-color) 100%
+	);
+}
+
+header h2 {
+	font-size: 175%;
+	color: var(--primary-color);
+	padding-bottom: 0;
+}
+
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+
+header img {
+	float: left;
+	margin: 0 30px;
+	width: clamp(40px, 15%, 66px);
+}
+
+.shadow {
+	text-shadow: 2px 2px 2px var(--accent-color);
+}
+
+/* main */
+main {
+	clear: left;
+	display: flex;
+}
+
+main > aside:first-child {
+	width: 30%;
+	padding-right: 1em;
+}
+
+main > section {
+	width: 70%;
+	padding-left: 1em;
+	border-left: 3px solid var(--primary-color);
+}
+
+/* section */
+section h1 {
+	padding-top: .5em;
+}
+
+section h2 {
+	color: var(--primary-color);
+}
+
+section article + aside {
+	border-top: 3px solid var(--primary-color);
+	border-bottom: 3px solid var(--primary-color);
+	padding-top: .5em;
+	margin-bottom: 1em;
+}
+
+section blockquote {
+	font-style: italic;
+	margin-left: 2em;
+}
+
+/* article */
+article {
+	padding-top: .5em;
+	margin-bottom: .5em;
+}
+
+article img {
+	float: left;
+	margin: .25em 1em 1em 0;
+	border: 1px solid var(--dark);
+	max-width: 40%;
+	height: auto;
+}
+
+/* aside */
+aside h2 {
+	color: var(--primary-color);
+}
+
+main > aside:first-child img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: .9em;
+}
+
+main > aside:first-child h3 {
+	font-size: 100%;
+	padding-bottom: .25em;
+}
+
+/* footer */
+footer {
+	clear: both;
+	background-color: var(--primary-color);
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	padding-bottom: 0;
+}
